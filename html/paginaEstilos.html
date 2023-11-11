@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESTILOS css3</title>
+    <!--a nivel completo, se puede usar tipos de selectores-->
+    <style>
+        *{
+          text-align: center;  
+        }
+
+        /*nombre del elemento*/
+        h3{
+            color: brown;
+        }
+        h1{
+            color:rgb(55, 156, 156);
+        }
+        /*id del elemento*/
+        #idtitulo{
+            color:rgb(234, 0, 255);
+        }
+        /*clase del elemento*/
+        .amarillo{
+            color:blue;
+        }
+
+        /* img[src*="png"]{
+            width: 50px;
+            height: 50px;
+        } */
+        /* img[src*="jpg"]{
+            width: 50px;
+            height: 50px;
+        } */
+        img[src]{
+            width: 50px;
+            height: 50px;
+        }
+        h6:hover{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!--cuando hay mas declaraciones usar ";"-->
+        <!--no es recomendable definir estilos asi-->
+        <h2 style="color:blue;">FORMULARIO UCE</h2>
+        <h1>Prueba1</h1>
+        <h3>Prueba3</h3>
+        <h4>Prueba4</h4>
+        <h3>Prueba Final 3</h3>
+        <h5 id="idtitulo">Selector identificador</h5>
+
+        <label class="amarillo" for="">selector clase yellow</label>
+        <h6 class="amarillo">selector clase yellow </h6>
+        <img src="https://raulperez.tieneblog.net/wp-content/uploads/2015/09/tux.jpg" alt="No se muestra la imagen">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" alt="No se muestra la imagen">
+    </header>
+    <nav></nav>
+    <section>
+        <!--contenido-->
+        <label for="idnombre">Nombre</label>
+        <input id="idnombre" type="text">
+        <button>Guardar</button>
+    </section>
+    <aside></aside>
+    <footer></footer>
+</body>
+</html>
