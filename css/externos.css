@@ -1,0 +1,35 @@
+*{
+    text-align: center;  
+  }
+
+  /*nombre del elemento*/
+  h3{
+      color: brown;
+  }
+  h1{
+      color:rgb(55, 156, 156);
+  }
+  /*id del elemento*/
+  #idtitulo{
+      color:rgb(234, 0, 255);
+  }
+  /*clase del elemento*/
+  .amarillo{
+      color:blue;
+  }
+
+  /* img[src*="png"]{
+      width: 50px;
+      height: 50px;
+  } */
+  /* img[src*="jpg"]{
+      width: 50px;
+      height: 50px;
+  } */
+  img[src]{
+      width: 50px;
+      height: 50px;
+  }
+  h6:hover{
+      color:red;
+  }

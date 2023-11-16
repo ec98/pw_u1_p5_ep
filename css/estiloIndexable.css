@@ -1,0 +1,50 @@
+/* estilos (combinar)*/
+/* .menu .li*/
+/* puedo hacer combinaciones por espacio, con la condicion de que deban ser hijos de la clase menu. */
+/* .menu, y aplique a todo lo que es li, rompe el arbol. */
+/* .menu, li{
+    list-style: none;
+} */
+/* nav, li la descripcion padre no existe, aplica a todos los nav li */
+.menu, li{
+    list-style: none;
+    display: inline-block;
+    font:bold 14px arial;
+    border: solid;
+    /* manecillas del reloj de 90 grados una vuelta completa */
+    /* padding: 5px 35px 5px 15px; */
+    /* 2 valores up, bottom, 4 valores all */
+    /* 1 valor aplica a todos los lados */
+    padding: 10px;
+    /* margin: 20px 140px; */
+    /* margin: 2px; */
+}
+.cabecera h1, h6{
+    text-align: center;
+}
+
+.menu{
+    /* background es lo mismo que background color */
+    background: #2982cf50;
+    text-align: left;
+}
+h1{
+    font-size: 100px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body{
+    text-align: center;
+    background-color: rgb(247, 244, 244);
+}
+img[src]{
+    width: 100px;
+    height: 100px;
+}
+.agrupar{
+    border: 1px solid black;
+    background-color: white;
+    width: 900px;
+    margin: 15px auto;
+}
