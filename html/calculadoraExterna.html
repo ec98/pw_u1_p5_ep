@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entry calculadora</title>
+    <style>
+        img[src] {
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+    <script src="../js/calculadoraFunciones.js">
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Mi Calculadora</h1>
+    </header>
+    <nav></nav>
+    <section>
+        <!--entradas de numeros-->
+        <label for="idnumber1">Numero 1: </label>
+        <input type="number" id="idnumber1">
+        <label for="idnumber2">Numero 2: </label>
+        <input type="number" id="idnumber2">
+
+        <img id="idimagen1" src="https://w7.pngwing.com/pngs/132/187/png-transparent-cheems-dog.png" alt="No.">
+       
+        <label id="idResultado" for=""></label>
+        <div id="iddiv">
+            <!-- <button>Hello</button> -->
+        </div>
+        <h2>JS EXTERNO</h2>
+        <button onclick="sumNumbersComplete()">SUMAR EXTERNO COMPLETO</button>
+        <button onclick="restNumbers()">RESTAR EXTERNO COMPLETO</button>
+        <button onclick="multiNumbers()">MULTIPLICAR EXTERNO COMPLETO</button>
+        <button onclick="divNumbers()">DIVIDIR EXTERNO COMPLETO</button>
+        <button onclick="changeImage()">IMAGEN EXTERNO COMPLETO</button>
+        
+        <label id="idResultado2" for=""></label>
+    </section>
+    <footer>
+        Todos los derechos ec98 Reservados 2009-2023
+    </footer>
+</body>
+
+</html>
