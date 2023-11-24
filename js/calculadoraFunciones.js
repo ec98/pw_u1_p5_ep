@@ -42,5 +42,6 @@ function divNumbers(){
 
 function changeImage(){
     var img = document.getElementById('idimagen1').src='https://static.vecteezy.com/system/resources/previews/010/898/286/original/game-cube-dice-png.png'
-    document.getElementById('idResultado').innerHTML = img
+    // document.getElementById('idResultado').innerHTML = img
+    console.log(img)
 }
