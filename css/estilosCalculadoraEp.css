@@ -41,8 +41,16 @@
 
 label{
     height: 20px;
-    margin-left: 70px;
+    margin-left: 10px;
+    width: 135px;
+    background: white;
+    text-align: center;
 }
 h1{
     text-align: center;
+    font-family: 'Segoe UI';
+}
+#idresult:hover{
+    color: red;
+    background: black;
 }

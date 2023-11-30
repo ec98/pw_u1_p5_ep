@@ -1,0 +1,58 @@
+/* A TODA LA PAGINA */
+body{
+    background: #59ABE3;
+}
+/* por determinacion tener un container */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    width: 340px;
+    height: 450px;
+    background: #e6e6e6;
+    border-radius: 8px;
+    padding: 20px 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 0 40px -10px #000;
+}
+h2{
+    margin: 10px 75px;
+    padding-bottom: 10px;
+    text-align: center;
+    width: 200px;
+    color: #78788c;
+    border-bottom: 3px solid #78788c;
+}
+/* antes que se renderize, se aplique */
+p:before{
+    /* estilos estandar 2 */
+    content: attr(type);
+    display: block;
+    margin: 10px 0px;
+    font-size: 16px;
+    color: #5a5a5a;
+}
+
+input{
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #bebed2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: none;
+}
+/* posicionar -> focus */
+input:focus{
+    border-bottom: 3px solid #78788c;
+}
+
+/* aplicar estilos al boton y el titulo */
+.btn-estudiante{
+    margin: 20px 100px;
+}
+h1{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
