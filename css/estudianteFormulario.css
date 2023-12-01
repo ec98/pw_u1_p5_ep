@@ -49,10 +49,17 @@ input:focus{
 }
 
 /* aplicar estilos al boton y el titulo */
-.btn-estudiante{
-    margin: 20px 100px;
-}
 h1{
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.btn-estudiante{
+    /* margin: 20px 100px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#idbtn:hover{
+    background: #59ABE3;
+    border-radius: 11%;
 }
