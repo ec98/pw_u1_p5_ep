@@ -1,6 +1,8 @@
+
 const parsear = (id) => parseInt(document.getElementById(id).innerHTML) //validar valores de tipo ID's.
 
 let suma = 0, resta = 0, multiplicacion = 1, division = 1;
+let operaciones = null;
 
 function numero(id) {
     const numberid = parsear(id);
@@ -41,4 +43,21 @@ function resetNumeros() {
     multiplicacion = 1;
     division = 1;
     document.getElementById('idresult').innerText = '0';
+}
+function resetDigits() {
+    document.getElementById('idresult').innerText -= 1;
+}
+
+function igualResult() {
+    switch (operaciones) {
+        case operacionSuma():
+            break;
+        case operacionResta():
+            break;
+        case operacionMultiplicacion():
+            break;
+        case operacionDivision():
+            break;
+    }
+    operaciones = null;
 }
