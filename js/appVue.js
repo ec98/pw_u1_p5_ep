@@ -14,6 +14,27 @@ const app = Vue.createApp({
     <p>{{true? 'False' : 'Verdadero'}}</p>
     `
     */
+   methods:{
+    cambiarMensaje(){
+        console.log("cambiar mensaje");
+        console.log(this.mensaje);
+        this.mensaje = 'aqui se cambia mi mensaje de un return';
+    },
+    cambiarNumero(){
+        console.log("cambiar numero");
+        console.log(this.valor);
+        this.valor++;
+    }
+   },
+   watch:{
+
+   },
+   data(){
+    return {
+        mensaje: 'cambiado el mensaje desde un this.mensaje',
+        valor: 10
+    }
+   }
 });
 
 // crear al identificador.
