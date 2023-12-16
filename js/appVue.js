@@ -5,11 +5,11 @@ console.log(Vue);
 
 // arreglo de estudiantes
 const estudiantes = [
-    {nombre: "Edwin", apellido:"Piruch"},
-    {nombre: "Maria", apellido:"Angela"},
-    {nombre: "Sofia", apellido:"Martha"},
-    {nombre: "Lucy", apellido:"Lopez"},
-    {nombre: "Naomi", apellido:"Moya"}
+    { nombre: "Edwin", apellido: "Piruch" },
+    { nombre: "Maria", apellido: "Angela" },
+    { nombre: "Sofia", apellido: "Martha" },
+    { nombre: "Lucy", apellido: "Lopez" },
+    { nombre: "Naomi", apellido: "Moya" }
 ]
 console.log(estudiantes)
 console.table(estudiantes)
@@ -27,53 +27,65 @@ const app = Vue.createApp({
     <p>{{true? 'False' : 'Verdadero'}}</p>
     `
     */
-   methods:{
-    cambiarMensaje(){
-        console.log("cambiar mensaje");
-        console.log(this.mensaje);
-        this.mensaje = 'aqui se cambia mi mensaje de un return';
+    methods: {
+        cambiarMensaje() {
+            console.log("cambiar mensaje");
+            console.log(this.mensaje);
+            this.mensaje = 'aqui se cambia mi mensaje de un return';
+        },
+        cambiarNumero() {
+            console.log("cambiar numero");
+            console.log(this.valor);
+            this.valor++;
+        },
+        agregarEstudiante() {
+            console.log("agregando estudiante");
+            const estu = { nombre: this.nombre, apellido: this.apellido }; //crear el objeto de tipo estudiante
+            // this.lista.unshift(estu); //agregar elemento al inicio
+            this.lista.push(estu); //agregar elemento al final
+            // this.lista.pop(estu) //eliminar elemento en la lista
+        },
+        // otra propiedad
+        presionandoTecla(event) {
+            console.log("presionando....");
+            console.log(event);
+            // atributo charcode
+            console.log(event.charCode);
+        },
+        //{charCode, n atributos}
+        presionarTecla({ charCode }) {
+            console.log("presionando 1... *enter");
+            // console.log(event);
+            // console.log(charCode)
+            const elem = 13;
+            if (charCode === elem) {
+                this.agregarEstudiante();
+            }
+
+        },
+        agregarEstudianteModificador({charCode}) {
+            console.log("presionando 2....");
+            console.log(this.nombre);
+            console.log(this.apellido);
+            if(charCode === 13){
+                this.agregarEstudiante();
+            }
+        }
     },
-    cambiarNumero(){
-        console.log("cambiar numero");
-        console.log(this.valor);
-        this.valor++;
+    watch: {
+
     },
-    agregarEstudiante(){
-        console.log("agregando estudiante");
-        const estu = {nombre: this.nombre, apellido: this.apellido}; //crear el objeto de tipo estudiante
-        // this.lista.unshift(estu); //agregar elemento al inicio
-        this.lista.push(estu); //agregar elemento al final
-        // this.lista.pop(estu) //eliminar elemento en la lista
-    },
-    // otra propiedad
-    presionandoTecla(event){
-        console.log("presionando....");
-        console.log(event);
-        // atributo charcode
-        console.log(event.charCode);
-    },
-    presionarTelca(event){
-        console.log("enter")
-        const elem = 13;
-        if(event === elem){
-            agregarEstudiante();
+    //    propiedad reactiva
+    data() {
+        return {
+            mensaje: 'cambiado el mensaje desde un this.mensaje',
+            valor: 10,
+            // no podemos renderizar el vector.
+            lista: estudiantes,
+            nombre: null,
+            apellido: null
         }
     }
-   },
-   watch:{
-
-   },
-//    propiedad reactiva
-   data(){
-    return {
-        mensaje: 'cambiado el mensaje desde un this.mensaje',
-        valor: 10,
-        // no podemos renderizar el vector.
-        lista:estudiantes,
-        nombre:null,
-        apellido:null
-    }
-   }
 });
 
 // crear al identificador.

@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VueAcc</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
+
 <body>
-    
+
     <header></header>
     <section>
         <h6>{{1+1}}</h6>
@@ -28,22 +30,22 @@
 
             <button v-on:click="cambiarMensaje">Cambiar mensaje</button>
             <button v-on:click="cambiarNumero">Cambiar numero</button>
-            <hr/>
+            <hr />
             <!-- se puede usar la propiedad reactiva -->
             <p>{{lista}}</p>
             <!-- especifar n de elementos -->
             <!-- <table></table> -->
 
             <!-- crear dos cajas de texto tipo input -->
-                <label for="idNombre">Nombre</label>
-                <!-- accediendo a la propiedad reactiva JS -->
-                <input v-on:keypress="presionandoTecla" id="idNombre" type="text" v-model="nombre">
-                <label for="idApellido">Apellido</label>
-                <input v-on:keypress="presionarTelca" id="idApellido" type="text" v-model="apellido">
+            <label for="idNombre">Nombre</label>
+            <!-- accediendo a la propiedad reactiva JS -->
+            <input @keypress="presionandoTecla" id="idNombre" type="text" v-model="nombre">
+            <label for="idApellido">Apellido</label>
+            <input @keypress.enter="agregarEstudianteModificador" id="idApellido" type="text" v-model="apellido">
 
-                <button v-on:click="agregarEstudiante">Agregar</button>
-                {{nombre}}
-                {{apellido}}
+            <button @click="agregarEstudiante">Agregar</button>
+            {{nombre}}
+            {{apellido}}
 
             <ul>
                 <!-- li -> directiva v-for -->
@@ -56,7 +58,11 @@
                 <!-- <li v-for="(estudiante, index) in lista">{{index+1}}:{{estudiante.apellido}} - {{estudiante.apellido}} <button>Editar</button></li> -->
 
                 <!-- desestructuracion de objetos -->
-                <li v-for="({nombre, apellido}, index) in lista">{{index+1}}:{{nombre}} - {{apellido}} <button>Editar</button></li>
+                <li v-for="({nombre, apellido}, index) in lista">
+                    <p v-if="nombre !=='' ? true : false">{{index+1}}:{{nombre}} - {{apellido}}</p>
+                    <!-- {{nombre !==''}} -->
+                    <button v-if="nombre !== null ? true : false">Editar</button>
+                </li>
                 <!-- <li>Maria</li>
                 <li>Sofia</li>
                 <li>Lucy</li>
@@ -66,4 +72,5 @@
         <script src="../js/appVue.js"></script>
     </section>
 </body>
+
 </html>
